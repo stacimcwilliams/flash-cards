@@ -25,4 +25,4 @@ describe('deck', function() {
     assert.equal(deck.count(), 3)
   });
 
-})
+});

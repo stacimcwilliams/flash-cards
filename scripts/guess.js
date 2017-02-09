@@ -6,18 +6,16 @@ import Card from './card'
     this.card = card;
     this.question = card.question;
     this.answer = card.answer;
-    // this.correct = this.response === questionCard.answer ? true : false
-    if  (this.response === card.answer) {
+    if (this.response === card.answer) {
     this.correct = true
-  } else {
+    } else {
     this.correct = false
+    }
   }
-}
+
   feedback() {
     return this.correct ? "Correct!" : "Incorrect."
   }
 }
-
-
 
 export default Guess

@@ -13,7 +13,7 @@ class Round {
     return this.deck.cards[this.count]
   }
 
-  recordGuess(response){
+  recordGuess(response) {
     var myGuess = new Guess(response,this.deck.cards[this.count])
     this.guesses.push(myGuess)
     this.count ++
@@ -30,7 +30,7 @@ class Round {
   numberCorrect() {
   return this.guesses.filter(function(e,i,a) {
         return e.correct;
-    }).length
+  }).length
   }
 
 }
