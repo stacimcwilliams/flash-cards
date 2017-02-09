@@ -20,8 +20,7 @@ class Round {
   }
 
   percentCorrect() {
-    //num 1/num2 * 100
-
+    return (this.numberCorrect()/this.guesses.length) * 100
   }
 
   count(round) {

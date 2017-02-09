@@ -26,7 +26,7 @@ describe('round', function() {
   });
 
   it('when you record a guess your array should have a new element', function() {
-  let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
+    let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
     let deck  = new Deck([card1])
     let round = new Round(deck)
     round.recordGuess("Juneau")
@@ -34,8 +34,8 @@ describe('round', function() {
   });
 
   it('should return the count when you add a guess', function() {
-    let card1 = new Card("What is the capital of Alaska?", "Juneau")
-    let card2 = new Card("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
+    let card2 = new Card({question:"Approximately how many miles are in one astronomical unit?", answer:"93,000,000"})
     let deck  = new Deck([card1, card2])
     let round = new Round(deck)
     round.recordGuess("Juneau")
@@ -43,8 +43,8 @@ describe('round', function() {
   });
 
   it('should return the number of correct guesses', function() {
-    let card1 = new Card("What is the capital of Alaska?", "Juneau")
-    let card2 = new Card("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
+    let card2 = new Card({question:"Approximately how many miles are in one astronomical unit?", answer:"93,000,000"})
     let deck  = new Deck([card1, card2])
     let round = new Round(deck)
     round.recordGuess("North");
@@ -54,16 +54,16 @@ describe('round', function() {
   });
 
   it('should return the currrent card', function() {
-    let card1 = new Card("What is the capital of Alaska?", "Juneau")
-    let card2 = new Card("Approximately how many miles are in one astronomical unit?", "93,000,000")
+    let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
+    let card2 = new Card({question:"Approximately how many miles are in one astronomical unit?", answer:"93,000,000"})
     let deck  = new Deck([card1, card2])
     let round = new Round(deck)
     assert.equal(round.currentCard(), card1)
   });
 
-  it.skip('should return the percent correct', function() {
-    let card1 = new Card("What is the capital of Alaska?", "Juneau")
-    let card2 = new Card("Approximately how many miles are in one astronomical unit?", "93,000,000")
+  it('should return the percent correct', function() {
+    let card1 = new Card({question: "What is the capital of Alaska?", answer:"Juneau"})
+    let card2 = new Card({question:"Approximately how many miles are in one astronomical unit?", answer:"93,000,000"})
     let deck  = new Deck([card1, card2])
     let round = new Round(deck)
     round.recordGuess("Juneau");
