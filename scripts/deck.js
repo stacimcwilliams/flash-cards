@@ -1,4 +1,4 @@
-import Card from './card'
+import Card from './card';
 
 class Deck {
   constructor(cards){
@@ -9,4 +9,4 @@ class Deck {
   }
 }
 
-export default Deck
+export default Deck;

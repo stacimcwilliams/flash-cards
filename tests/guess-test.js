@@ -1,8 +1,8 @@
 import { assert, expect } from 'chai';
-import Card from '../scripts/card'
-import Guess from '../scripts/guess'
-import Deck from '../scripts/deck'
-import Round from '../scripts/round'
+import Card from '../scripts/card';
+import Guess from '../scripts/guess';
+import Deck from '../scripts/deck';
+import Round from '../scripts/round';
 
 describe('guess', () => {
 
@@ -13,7 +13,7 @@ describe('guess', () => {
   it('should return correct when the guess matches the answer', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('blue', myCard);
-    (myGuess.feedback(), 'Correct!');
+    assert.equal(myGuess.feedback(), 'Correct!');
   });
 
   it('should return incorrect when the guess does not match the answer', () => {

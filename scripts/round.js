@@ -1,6 +1,6 @@
-import Deck from './deck'
-import Guess from './guess'
-import Card from './card'
+import Deck from './deck';
+import Guess from './guess';
+import Card from './card';
 
 class Round {
   constructor(deck) {
@@ -10,29 +10,29 @@ class Round {
   }
 
   currentCard() {
-    return this.deck.cards[this.count]
+    return this.deck.cards[this.count];
   }
 
   recordGuess(response) {
-    var myGuess = new Guess(response,this.deck.cards[this.count])
-    this.guesses.push(myGuess)
-    this.count ++
+    var myGuess = new Guess(response,this.deck.cards[this.count]);
+    this.guesses.push(myGuess);
+    this.count ++;
   }
 
   percentCorrect() {
-    return (this.numberCorrect()/this.guesses.length) * 100
+    return (this.numberCorrect()/this.guesses.length) * 100;
   }
 
   count(round) {
-    return this.count
+    return this.count;
   }
 
   numberCorrect() {
   return this.guesses.filter(function(e,i,a) {
         return e.correct;
-  }).length
+  }).length;
   }
 
 }
 
-export default Round
+export default Round;

@@ -1,4 +1,4 @@
-import Card from './card'
+import Card from './card';
 
  class Guess {
   constructor(response, card){
@@ -7,15 +7,15 @@ import Card from './card'
     this.question = card.question;
     this.answer = card.answer;
     if (this.response === card.answer) {
-    this.correct = true
+    this.correct = true;
     } else {
-    this.correct = false
+    this.correct = false;
     }
   }
 
   feedback() {
-    return this.correct ? "Correct!" : "Incorrect."
+    return this.correct ? "Correct!" : "Incorrect.";
   }
 }
 
-export default Guess
+export default Guess;

@@ -1,5 +1,5 @@
 import { assert, expect } from 'chai';
-import Card from '../scripts/card'
+import Card from '../scripts/card';
 
 describe('card', () => {
 
@@ -9,12 +9,12 @@ describe('card', () => {
 
   it('should have a question', () => {
     let card = new Card({question:'Do you like pie', answer:'Yes!!'});
-    assert.equal(card.question, 'Do you like pie')
+    assert.equal(card.question, 'Do you like pie');
   });
 
   it('should have an answer', () => {
-    let card = new Card({question:'Do you like pie', answer:'Yes!!'})
-    assert.equal(card.answer, 'Yes!!')
+    let card = new Card({question:'Do you like pie', answer:'Yes!!'});
+    assert.equal(card.answer, 'Yes!!');
   });
 
 });
