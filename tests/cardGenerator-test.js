@@ -4,7 +4,7 @@ import { assert, expect } from 'chai';
 import CardGenerator from '../scripts/cardGenerator'
 import Card from '../scripts/card'
 
-describe('cardGenerator', function() {
+describe('cardGenerator', () => {
 
   it('loads cards from a file', () => {
     const filename = "./scripts/words.txt";

@@ -4,37 +4,37 @@ import Guess from '../scripts/guess'
 import Deck from '../scripts/deck'
 import Round from '../scripts/round'
 
-describe('guess', function() {
+describe('guess', () => {
 
-  it('should be a function', function() {
+  it('should be a function', () => {
     assert.isFunction(Guess);
   });
 
-  it('should return correct when the guess matches the answer', function() {
+  it('should return correct when the guess matches the answer', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('blue', myCard);
     (myGuess.feedback(), 'Correct!');
   });
 
-  it('should return incorrect when the guess does not match the answer', function() {
+  it('should return incorrect when the guess does not match the answer', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('black', myCard);
     assert.equal(myGuess.feedback(), 'Incorrect.');
   });
 
-  it('should return an answer', function() {
+  it('should return an answer', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('red', myCard);
     assert.equal(myGuess.response, 'red' );
   });
 
-  it('if the answer is correct this.correct should return true', function() {
+  it('if the answer is correct this.correct should return true', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('blue', myCard);
     assert.equal(myGuess.correct, true);
   });
 
-  it('if the answer is incorrect this.correct should return false', function() {
+  it('if the answer is incorrect this.correct should return false', () => {
     var myCard = new Card({question:'What color is the sky?', answer: 'blue'});
     var myGuess = new Guess('red', myCard);
     assert.equal(myGuess.correct, false);

@@ -3,13 +3,13 @@ import { assert, expect} from 'chai';
 import Deck from '../scripts/deck'
 import Card from '../scripts/card'
 
-describe('deck', function() {
+describe('deck', () => {
 
-  it('should be a function', function() {
+  it('should be a function', () => {
     assert.isFunction(Deck);
   });
 
-  it('should store cards in the deck', function() {
+  it('should store cards in the deck', () => {
     let card1 = new Card("What is the capital of Alaska?", "Juneau")
     let card2 = new Card("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars")
     let card3 = new Card("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west")
@@ -17,7 +17,7 @@ describe('deck', function() {
     assert.deepEqual(deck.cards, [card1,card2,card3]);
   });
 
-  it('should be able to return the length of the deck', function() {
+  it('should be able to return the length of the deck', () => {
     let card1 = new Card("What is the capital of Alaska?", "Juneau")
     let card2 = new Card("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars")
     let card3 = new Card("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west")
